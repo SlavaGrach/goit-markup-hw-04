@@ -79,6 +79,22 @@ body {
 .white-theme {
   background-color: var(--primary-background-color);
 }
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/hero-img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* ================= END COMPONENTS =================*/
 
 /* ================= HEADER =================*/
@@ -202,7 +218,7 @@ body {
 /*================= ABOUT =================  */
 
 .about {
-  margin-top: 95px;
+  padding-top: 95px;
 }
 
 .container .about {
@@ -212,6 +228,17 @@ body {
 .about-list {
   display: flex;
   justify-content: space-between;
+}
+
+.about-list-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-image: url(../images/sprite/antenna\ 1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 30px;
 }
 
 .about-list-item:not(:last-child) {
@@ -245,7 +272,8 @@ body {
 /*================= WORK =================  */
 
 .work {
-  margin-top: 95px;
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
 .container .work {
@@ -272,13 +300,7 @@ body {
 
 /*================= TEAM =================  */
 
-.container .team {
-  background-color: #f5f4fa;
-  margin-bottom: 95px;
-}
-
 .team {
-  margin-top: 95px;
   padding-top: 95px;
   padding-bottom: 95px;
   background-color: var(--secondary-background-color);
@@ -374,8 +396,9 @@ body {
 
 /*================= PORTFOLI PAGE =================  */
 
-.portfolio-main {
-  margin-top: 95px;
+.portfolio-list {
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
 .filter-list {
@@ -389,6 +412,7 @@ body {
 }
 
 .filter-button {
+  padding: 6px 22px;
   border-radius: 4px;
   border: 0;
 
@@ -411,7 +435,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 95px;
 }
 
 .projects-item {
