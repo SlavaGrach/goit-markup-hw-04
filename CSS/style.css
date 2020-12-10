@@ -161,6 +161,8 @@ body {
   padding-right: 50px;
 }
 .address-list-link {
+  display: flex;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -170,6 +172,19 @@ body {
   color: var(--primary-text-color);
 }
 
+.adress-list-icon-mail,
+.adress-list-icon-phone {
+  margin-right: 10px;
+}
+
+.address-list-link:hover .adress-list-icon-mail,
+.address-list-link:hover
+  .adress-list-icon-phone
+  .address-list-link:focus
+  .adress-list-icon-mail,
+.address-list-link:focus .adress-list-icon-phone {
+  fill: var(--acent-color);
+}
 .nav-list-link:hover,
 .nav-list-link:focus,
 .address-list-link:hover,
@@ -230,19 +245,17 @@ body {
   justify-content: space-between;
 }
 
-.about-list-item::before {
-  content: '';
-  display: block;
-  height: 120px;
-  background-image: url(../images/sprite/antenna\ 1.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--secondary-background-color);
-  margin-bottom: 30px;
-}
-
 .about-list-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.about-list-item-img {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: var(--secondary-background-color);
 }
 
 .about-list-title {
@@ -253,6 +266,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--tile-text-color);
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
